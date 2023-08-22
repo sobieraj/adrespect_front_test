@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+  </head>
+  <body>
+
+  <header>
+    <nav class="bg-white">
+      <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+        <a href="#" class="flex items-center">
+          <img src="src/images/logo.svg" alt="Giard Design">
+        </a>
+        <button id="mobile-menu-button" class="mobile-menu flex md:hidden" onclick="this.classList.toggle('opened')">
+          <svg width="40" height="40" viewBox="0 0 100 100">
+            <path class="line line1" d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
+            <path class="line line2" d="M 20,50 H 80" />
+            <path class="line line3" d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
+          </svg>
+        </button>
+        <ul class="hidden text-black-light items-stretch w-full text-lg lg:text-sm md:flex flex-col gap-4 md:flex-row md:w-auto md:gap-12" id="menu">
+          <li class="flex items-center group">
+            <div>
+              <a class="flex self-center align-middle gap-1 cursor-pointer">
+                <span class="self-center transition-opacity hover:opacity-80">Oferta</span>
+                <svg class="hidden md:block h-3 w-3 -mt-0.5 self-center group-hover:rotate-180 transition-transform" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"></path>
+                </svg>
+              </a>
+              <div class="block md:hidden md:group-hover:block md:hover:block relative">
+                <ul class="w-max bg-white p-2 md:absolute md:border-grey md:rounded md:shadow md:top-1 md:left-0 md:z-10">
+                  <li><a class="p-2 block rounded md:hover:bg-grey" href="#offer-1">Projekty</a></li>
+                  <li><a class="p-2 block rounded md:hover:bg-grey" href="#offer-2">Wizualizacje</a></li>
+                  <li><a class="p-2 block rounded md:hover:bg-grey" href="#offer-3">Realizacje</a></li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li class="flex items-center">
+            <a class="transition-opacity hover:opacity-80" href="#about">O firmie</a>
+          </li>
+          <li class="flex items-center">
+            <a class="transition-opacity hover:opacity-80" href="#projects">Realizacje</a>
+          </li>
+          <li class="flex items-center">
+            <a class="transition-opacity hover:opacity-80" href="#contact">Kontakt</a>
+          </li>
+          <li>
+            <input class="hover:opacity-80 bg-loupe rounded-md border border-black bg-no-repeat bg-[center_right_1rem] lg:bg-center lg:text-transparent p-2 pl-4 pr-12 w-full cursor-pointer transition-all md:bg-center md:border-none md:rounded-sm md:outline-none md:pr-4 md:w-4 md:focus:w-40 md:focus:bg-none md:focus:text-black-light md:focus:outline md:focus:outline-black-light" type="text" value="" autocomplete="off">
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <section class="bg-beige overflow-hidden relative" id="slider">
+
+    <div class="swiper-wrapper ">
+      <div class="swiper-slide">
+        <div class="overflow-hidden md:grid md:grid-cols-2 justify-center">
+          <div class="flex flex-col justify-center">
+            <div class="p-4 py-12 text-grey lg:max-w-screen-sm self-end lg:py-36">
+              <h1 class="text-5xl font-medium font-mont text-black-light mb-11 lg:text-6xl">Nowoczesna aranżacja<br>Twojego ogrodu</h1>
+              <p class="text-black-light mb-[4.5rem] lg:pr-28">Marka GiardDesign to wieloletnie doświadczenie i wysoka estetyka realizacji. Oferujemy kompleksowy zakres usług z indywidualnym podejściem do każdego projektu.</p>
+              <div class="flex flex-col gap-9 items-center lg:flex-row">
+                <div>
+                  <a class="inline-block px-6 py-3 bg-green text-grey border border-green rounded-full transition-opacity hover:opacity-80" href="#">Skontaktuj się z nami</a>
+                </div>
+                <div>
+                  <a class="inline-block box-border px-6 py-3 rounded-full border border-green text-green break-normal transition-opacity hover:opacity-80" href="#">Zobacz nasze realizacje <span class="icon-arrow-bottom"></span></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="relative">
+            <picture>
+              <source srcset="src/images/slider/slider-item-1-2xl.jpg" media="(min-width: 1536px)" />
+              <source srcset="src/images/slider/slider-item-1-xl.jpg" media="(min-width: 1280px)" />
+              <source srcset="src/images/slider/slider-item-1-lg.jpg" media="(min-width: 1024px)" />
+              <source srcset="src/images/slider/slider-item-1-md.jpg" media="(min-width: 768px)" />
+              <img class="w-full h-full object-cover md:absolute md:-translate-y-1/2 md:top-1/2" src="src/images/slider/slider-item-1-sm.jpg" alt="Slider item" />
+            </picture>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="overflow-hidden md:grid md:grid-cols-2 justify-center">
+          <div class="flex flex-col justify-center">
+            <div class="p-4 py-12 text-grey lg:max-w-screen-sm self-end lg:py-36">
+              <h1 class="text-5xl font-medium font-mont text-black-light mb-11 lg:text-6xl">2 Nowoczesna aranżacja<br>Twojego ogrodu</h1>
+              <p class="text-black-light mb-[4.5rem] lg:pr-28">Marka GiardDesign to wieloletnie doświadczenie i wysoka estetyka realizacji. Oferujemy kompleksowy zakres usług z indywidualnym podejściem do każdego projektu.</p>
+              <div class="flex flex-col gap-9 items-center lg:flex-row">
+                <div>
+                  <a class="inline-block px-6 py-3 bg-green text-grey border border-green rounded-full transition-opacity hover:opacity-80" href="#">Skontaktuj się z nami</a>
+                </div>
+                <div>
+                  <a class="inline-block box-border px-6 py-3 rounded-full border border-green text-green break-normal transition-opacity hover:opacity-80" href="#">Zobacz nasze realizacje <span class="icon-arrow-bottom"></span></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="relative hue-rotate-90">
+            <picture>
+              <source srcset="src/images/slider/slider-item-1-2xl.jpg" media="(min-width: 1536px)" />
+              <source srcset="src/images/slider/slider-item-1-xl.jpg" media="(min-width: 1280px)" />
+              <source srcset="src/images/slider/slider-item-1-lg.jpg" media="(min-width: 1024px)" />
+              <source srcset="src/images/slider/slider-item-1-md.jpg" media="(min-width: 768px)" />
+              <img class="w-full h-full object-cover md:absolute md:-translate-y-1/2 md:top-1/2" src="src/images/slider/slider-item-1-sm.jpg" alt="Slider item" />
+            </picture>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="overflow-hidden md:grid md:grid-cols-2 justify-center">
+          <div class="flex flex-col justify-center">
+            <div class="p-4 py-12 text-grey lg:max-w-screen-sm self-end lg:py-36">
+              <h1 class="text-5xl font-medium font-mont text-black-light mb-11 lg:text-6xl">3 Nowoczesna aranżacja<br>Twojego ogrodu</h1>
+              <p class="text-black-light mb-[4.5rem] lg:pr-28">Marka GiardDesign to wieloletnie doświadczenie i wysoka estetyka realizacji. Oferujemy kompleksowy zakres usług z indywidualnym podejściem do każdego projektu.</p>
+              <div class="flex flex-col gap-9 items-center lg:flex-row">
+                <div>
+                  <a class="inline-block px-6 py-3 bg-green text-grey border border-green rounded-full transition-opacity hover:opacity-80" href="#">Skontaktuj się z nami</a>
+                </div>
+                <div>
+                  <a class="inline-block box-border px-6 py-3 rounded-full border border-green text-green break-normal transition-opacity hover:opacity-80" href="#">Zobacz nasze realizacje <span class="icon-arrow-bottom"></span></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="relative hue-rotate-180">
+            <picture>
+              <source srcset="src/images/slider/slider-item-1-2xl.jpg" media="(min-width: 1536px)" />
+              <source srcset="src/images/slider/slider-item-1-xl.jpg" media="(min-width: 1280px)" />
+              <source srcset="src/images/slider/slider-item-1-lg.jpg" media="(min-width: 1024px)" />
+              <source srcset="src/images/slider/slider-item-1-md.jpg" media="(min-width: 768px)" />
+              <img class="w-full h-full object-cover md:absolute md:-translate-y-1/2 md:top-1/2" src="src/images/slider/slider-item-1-sm.jpg" alt="Slider item" />
+            </picture>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="relative max-w-screen-xl m-auto">
+      <div class=" bg-grey text-4xl	text-black absolute bottom-0 right-0 z-20 flex">
+        <div class="cursor-pointer hover:opacity-60 transition-all p-10 swiper-button-prev icon-arrow-bold-left"></div>
+        <div class="cursor-pointer hover:opacity-60 transition-all p-10 swiper-button-next icon-arrow-bold-right"></div>
+      </div>
+
+    </div>
+
+
+  </section>
+
+  <section id="offer" class="bg-grey">
+    <div class="mx-auto p-4 py-12 lg:pb-40 lg:pt-32 max-w-screen-xl">
+      <div class="mb-12 md:mb-24">
+        <div class="text-xs text-green mb-4">Oferta</div>
+        <h2 class="text-4xl font-medium mb-8 lg:text-5xl"><span class="font-mont">Działamy</span> <i>kompleksowo</i></h2>
+        <p>Oferujemy kompletną obsługę inwestycji terenów zielonych. Projektujemy nowoczesne ogrody przydomowe oraz rezydencjonalne. Stworzymy dla Ciebie projekt, zwizualizujemy go i wcielimy w życie, a na każdym etapie posłużymy radą i wieloletnim doświadczeniem. </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-16" id="offer-1">
+        <div class="px-10 py-12 rounded-4xl bg-white basis-0 grow">
+          <img class="mb-8 w-11 h-11 object-contain" src="src/images/icon-pencil.png" alt="Projekty">
+
+          <h3 class="mb-3 font-mont font-medium text-xl">Projekty</h3>
+
+          <p class="text-sm mb-16">Zaprojektujemy Twój ogród w nowoczesnym stylu i z najlepszym wykorzystaniem istniejącej przestrzeni.</p>
+
+          <a class="text-green border-b border-green transition-opacity hover:opacity-80" href="#">Dowiedz się więcej <span class="icon-arrow-right"></span></a>
+        </div>
+        <div class="px-10 py-12 rounded-4xl bg-white basis-0 grow" id="offer-2">
+          <img class="mb-8 w-11 h-11 object-contain" src="src/images/icon-eye.png" alt="Wizualizacje">
+
+          <h3 class="mb-3 font-mont font-medium text-xl">Wizualizacje</h3>
+
+          <p class="text-sm mb-16">Przedstawimy Ci projekty koncepcyjne w postaci wirtualnego spaceru animowanego w technologii 3D.</p>
+
+          <a class="text-green border-b border-green transition-opacity hover:opacity-80" href="#">Dowiedz się więcej <span class="icon-arrow-right"></span></a>
+        </div>
+        <div class="px-10 py-12 rounded-4xl bg-white basis-0 grow" id="offer-3">
+          <img class="mb-8 w-11 h-11 object-contain" src="src/images/icon-stars.png" alt="Realizacje">
+
+          <h3 class="mb-3 font-mont font-medium text-xl">Realizacje</h3>
+
+          <p class="text-sm mb-16">Zrealizujemy Twoje marzenie przy użyciu najnowszych rozwiązań i zaawansowanych technologii.</p>
+
+          <a class="text-green border-b border-green transition-opacity hover:opacity-80" href="#">Dowiedz się więcej <span class="icon-arrow-right"></span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-green overflow-hidden" id="about">
+    <div class=" md:grid md:grid-cols-2 justify-center">
+      <div class="relative">
+        <picture>
+          <source srcset="src/images/about-2xl.jpg" media="(min-width: 1536px)" />
+          <source srcset="src/images/about-xl.jpg" media="(min-width: 1280px)" />
+          <source srcset="src/images/about-lg.jpg" media="(min-width: 1024px)" />
+          <source srcset="src/images/about-md.jpg" media="(min-width: 768px)" />
+          <img class="w-full h-full object-cover md:absolute md:-translate-y-1/2 md:top-1/2" src="src/images/about-sm.jpg" alt="O firmie" />
+        </picture>
+      </div>
+      <div class="flex flex-col justify-center">
+        <div class="p-4 py-12 text-grey max-w-screen-sm lg:pl-36 lg:py-36">
+          <div class="text-xs mb-4">O firmie</div>
+          <h2 class="text-4xl font-medium mb-8"><span class="font-mont">Tworzymy</span><br><i>z pasją</i></h2>
+          <p class="mb-[4.5rem]">Oferujemy kompletną obsługę inwestycji terenów zielonych. Projektujemy nowoczesne ogrody przydomowe oraz rezydencjonalne. Stworzymy dla Ciebie projekt, zwizualizujemy go i wcielimy w życie, a na każdym etapie posłużymy radą i wieloletnim doświadczeniem. </p>
+          <div>
+            <a class="inline-block box-border px-6 py-3 rounded-full border border-grey text-grey break-normal transition-opacity hover:opacity-80" href="#">Poznaj nas bliżej <span class="icon-arrow-right"></span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-beige relative overflow-hidden" id="projects">
+    <div class="max-w-screen-xl mx-auto">
+      <div class="p-4 py-12 lg:px-40 lg:pb-24 lg:pt-32">
+        <div class="text-xs text-green mb-4">Realizacje</div>
+        <h2 class="text-4xl font-medium"><span class="font-mont">Nasze</span> <i>projekty</i></h2>
+      </div>
+      <div class="max-h-screen overflow-hidden transition-all" id="expand-area">
+        <div class="pb-4 md:columns-2 md:gap-4 lg:columns-3 lg:gap-8">
+          <a class="block md:mb-4 lg:mb-8" data-fslightbox="gallery" href="images/projects/project-1.jpg">
+            <img class="" src="src/images/projects/project-1-small.jpg" alt="Project 1">
+          </a>
+          <a class="block md:mb-4 lg:mb-8" data-fslightbox="gallery" href="images/projects/project-2.jpg">
+            <img class="" src="src/images/projects/project-2-small.jpg" alt="Project 2">
+          </a>
+          <a class="block md:mb-4 lg:mb-8" data-fslightbox="gallery" href="images/projects/project-3.jpg">
+            <img class="" src="src/images/projects/project-3-small.jpg" alt="Project 3">
+          </a>
+          <a class="block md:mb-4 lg:mb-8" data-fslightbox="gallery" href="images/projects/project-4.jpg">
+            <img class="" src="src/images/projects/project-4-small.jpg" alt="Project 4">
+          </a>
+          <a class="block md:mb-4 lg:mb-8" data-fslightbox="gallery" href="images/projects/project-5.jpg">
+            <img class="" src="src/images/projects/project-5-small.jpg" alt="Project 5">
+          </a>
+          <a class="block md:mb-4 lg:mb-8" data-fslightbox="gallery" href="images/projects/project-6.jpg">
+            <img class="" src="src/images/projects/project-6-small.jpg" alt="Project 6">
+          </a>
+          <a class="block md:mb-4 lg:mb-8" data-fslightbox="gallery" href="images/projects/project-7.jpg">
+            <img class="" src="src/images/projects/project-7-small.jpg" alt="Project 7">
+          </a>
+          <a class="block md:mb-4 lg:mb-8" data-fslightbox="gallery" href="images/projects/project-8.jpg">
+            <img class="" src="src/images/projects/project-8-small.jpg" alt="Project 8">
+          </a>
+          <a class="block md:mb-4 lg:mb-8" data-fslightbox="gallery" href="images/projects/project-9.jpg">
+            <img class="" src="src/images/projects/project-9-small.jpg" alt="Project 9">
+          </a>
+        </div>
+      </div>
+      <a class="absolute bottom-16 left-1/2 -translate-x-1/2 z-10 inline-block box-border px-6 py-3 rounded-full border border-black-light text-black-light break-normal transition-opacity hover:opacity-80" id="expand-area-btn" href="#">Rozwiń <span class="icon-arrow-bottom"></span></a>
+      <div class="absolute bottom-0 left-0 right-0 shadow-custom"></div>
+    </div>
+  </section>
+
+
+  <section id="contact">
+    <div class="mx-auto bg-green text-grey p-12 md:flex md:justify-between md:items-center md:p-10 md:m-10 lg:px-28 lg:py-32 lg:mx-auto lg:max-w-screen-lg">
+      <h2 class="font-mont lg:self-end mb-4 text-3xl lg:text-4.5xl lg:mb-0">Zostańmy w kontakcie!<br>Znajdziesz nas na <i class="font-inter">Instagramie</i>.</h2>
+      <div class="flex justify-between items-center md:flex-col md:items-start">
+        <p class="mb-4">Śledź nasze <br class="hidden md:block">najnowsze realizacje!</p>
+        <a class="inline-block px-6 py-3 bg-grey text-green rounded-full transition-opacity hover:opacity-80" href="#">Instagram</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-black-light text-grey">
+    <div class="p-4 md:py-10 lg:py-20 lg:px-0 lg:max-w-screen-lg mx-auto">
+      <div class="flex flex-col gap-5 items-center md:flex-row md:justify-between">
+        <div>
+          <img src="src/images/logo-white.svg" alt="giarddesign">
+        </div>
+        <div class="flex flex-col gap-4 items-center md:flex-row lg:justify-end">
+          <div>
+            Daj znać, co możemy dla Ciebie zrobić!
+          </div>
+          <div>
+            <a class="inline-block px-6 py-3 bg-green text-grey rounded-full transition-opacity hover:opacity-80" href="#">Skontaktuj się z nami</a>
+          </div>
+        </div>
+      </div>
+
+      <hr class="my-8 border-grey lg:my-16">
+
+      <div class="md:flex md:justify-between lg:mb-32 pb-4">
+        <nav class="flex justify-between mb-4 md:gap-6 lg:gap-10 lg:mb-0">
+          <a class="transition-opacity hover:opacity-80" href="">Kontakt</a>
+          <a class="transition-opacity hover:opacity-80" href="">Instagram</a>
+          <a class="transition-opacity hover:opacity-80" href="">Facebook</a>
+          <a class="transition-opacity hover:opacity-80" href="">LinkedIn</a>
+        </nav>
+        <div class="flex justify-between md:gap-6">
+          <a class="transition-opacity hover:opacity-80" href="tel:000-000-000">000-000-000</a>
+          <a class="transition-opacity hover:opacity-80" href="mailto:giarddesign@kontakt.pl">giarddesign@kontakt.pl</a>
+        </div>
+      </div>
+
+      <div class="flex flex-col justify-between md:flex-row">
+        <div>Prawa zastrzeżone © 2022</div>
+        <div>made by <img class="inline-block" src="src/images/logo-adrespect.svg" alt="adRespect"></div>
+      </div>
+    </div>
+
+  </footer>
+
+
+
+
+
+
+
+
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>
